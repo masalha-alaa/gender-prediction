@@ -14,6 +14,7 @@ In some subreddits such as [r/AskMen](https://www.reddit.com/r/AskMen/), [r/AskW
 ## Preprocessing
 I performed the following preprocessing on the dataset before feeding it to the models:
 
+* Lowercase: convert all the data to lowercase.
 * Cleaning: drop posts with too few words, replace emojis with the token 'emj', replace URLs with the token 'url', and more.
 * Split to sentences: Using the Python library [nltk](https://www.nltk.org/), I split the posts to sentences (sentences are lines that end with a stopping punctuation mark). After this step each sample is a single sentence.
 * Shuffle: I shuffled the **sentences** to fade out any in-author relationships.
