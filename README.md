@@ -2,7 +2,7 @@
 
 
 ## Introduction
-In this project I attempt to predict the gender (male / female) of English text authors. I built the dataset myself by using a third Python library to fetch public posts and comments from reddit. I tackled the problem with 2 different methods and compared the results. The first method is a regular Machine Learning approach using several classifiers and TfIdf values of certain features, and the second method is a deep learning approach using a bidirectional LSTM network. Additionally, I deployed the final model to the web using Flask, so it can be accessed and tested online by everyone.
+In this project I attempt to predict the gender (male / female) of English text authors. I built the dataset myself by using a third Python library to fetch public posts and comments from reddit. I tackled the problem with 2 different methods and compared the results. The first method is a regular Machine Learning approach using several classifiers and TfIdf values of certain features, and the second method is a deep learning approach using a bidirectional LSTM network. Additionally, I will deploy the final model to the web using Flask, so it can be accessed and tested online by everyone.
 
 Here I present a quick overview of the project. For a complete walkthrough, including the code, please head over to the [src directory](https://github.com/masalha-alaa/gender-prediction/tree/master/src) for the regular ML approach, and to my notebook [gender-recognition-keras.ipynb](https://github.com/masalha-alaa/gender-prediction/blob/master/gender_recognition_keras.ipynb) for the DL approach.
 
@@ -68,3 +68,5 @@ I set the max epochs to 20, and set an EarlyStopping callback which monitors the
 As can be seen from the results, the two methods are comparable but the RNN deep learning approach outperformed the regular ML approach just a litte bit (2%).
 
 ## Deployment
+//Work in progress
+
