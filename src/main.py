@@ -68,7 +68,7 @@ def aggregate(df, sentences_n=4):
     return df_agg
 
 
-def score(clf, train_vals, test_vals, train_lbls, test_lbls, ftr_lst, print_confedice_level=False):
+def score(clf, train_vals, test_vals, train_lbls, test_lbls, ftr_lst, print_confidence_level=False):
     train_acc = clf.score(train_vals, train_lbls)
     test_acc = clf.score(test_vals, test_lbls)
     train_mse = mean_squared_error(train_lbls, clf.predict(train_vals))
@@ -76,7 +76,7 @@ def score(clf, train_vals, test_vals, train_lbls, test_lbls, ftr_lst, print_conf
 
     s_train = f'==> Train acc: {train_acc * 100:.2f}%'
     s_test = f'==> Test acc: {test_acc * 100:.2f}%'
-    if print_confedice_level:
+    if print_confidence_level:
         confidence_interval_train = Z_CONFIDENCE.value * np.sqrt((train_acc * (1 - train_acc)) / len(train_lbls))
         confidence_interval_test = Z_CONFIDENCE.value * np.sqrt((test_acc * (1 - test_acc)) / len(test_lbls))
         s_train += f' (±{confidence_interval_train*100:.0f}%)'
@@ -85,7 +85,7 @@ def score(clf, train_vals, test_vals, train_lbls, test_lbls, ftr_lst, print_conf
     s_train += f', MSE: {train_mse:.3f}'
     s_test += f', MSE: {test_mse:.3f}'
 
-    if print_confedice_level:
+    if print_confidence_level:
         confidence_interval_train = Z_CONFIDENCE.value * np.sqrt((train_mse * (1 - train_mse)) / len(train_lbls))
         confidence_interval_test = Z_CONFIDENCE.value * np.sqrt((test_mse * (1 - test_mse)) / len(test_lbls))
         s_train += f' (±{confidence_interval_train:.3f}), {Z_CONFIDENCE.name}'
@@ -142,7 +142,7 @@ if __name__ == '__main__':
     PRECUT = 0.3
     CLASS_SIZE = None  # None to take min max
     SELECT_K_BEST = 100
-    # TEST_ON_ANOTHER_DS = EXPLICIT_DS("dataset1")  # None for testing on same DS
+    # TEST_ON_ANOTHER_DS = EXPLICIT_DS("dataset3")  # None for testing on same DS
     # TEST_ON_ANOTHER_DS = EXPLICIT_DS("dataset1 and 2021-11-06 19-51-29")  # None for testing on same DS
     TEST_ON_ANOTHER_DS = None  # None for testing on same DS
     TRAIN_FRAC = 1 if TEST_ON_ANOTHER_DS else 0.70
