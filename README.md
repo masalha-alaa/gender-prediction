@@ -36,7 +36,7 @@ In this approach, I built a dataframe with the following features:
 
 Here the results among several classifiers that I tried, including an ensemble Voting model:
 
-|Model                   |Accuracy|  |MSE|  |Tolerance with 95% Confidence Level|
+|Model                   |Accuracy|  |MSE   |Tolerance with 95% Confidence Level|
 |------------------------|-----------|------|-----------------------------------|
 |Logistic Regression     |66.54%     |0.335 |±0.011|
 |Multinomial NB          |65.28%     |0.347 |±0.011|
