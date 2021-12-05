@@ -54,10 +54,14 @@ In this approach it's interesting to see the most important words for the classi
 ### Deep Learning Approach
 In this approach I used an RNN model which consists of an Embedding layer with 100 output dimension, one Bidirectional LSTM cell with 128 units and a softmax activation layer. The loss function is categorical cross entropy, and the optimzer is Adam with 0.0001 learning rate.
 
-What makes this approach essentially different than the regular ML approach, is that unlike the ML "BOW" approach, here we maintain the sequences. But in addition to the original text sequences, I wanted to add extra information such as POS and sentiment analysis. So I converted the text to pairs of (word, POS) and added the highest sentiment analysis category at the end of each sentence. For example, the sentence:  
-_if you 're dwelling on the negative all the time you 're going to wind up ignoring or missing the positives ._  
+What makes this approach essentially different than the regular ML approach, is that unlike the ML "BOW" approach, here we maintain the sequences. But in addition to the original text sequences, I wanted to add extra information such as POS and sentiment analysis. So I converted the text to pairs of (word, POS) and added the highest sentiment analysis category at the end of each sentence. For example, the sentence:
+
+**_if you 're dwelling on the negative all the time you 're going to wind up ignoring or missing the positives ._**
+
 Turned into:
-_if IN you PRP 're VBP dwelling VBG on IN the DT negative JJ all PDT the DT time NN you PRP 're VBP going VBG to TO wind VB up RP ignoring VBG or CC missing VBG the DT positives NNS . . neu_  
+
+**_if IN you PRP 're VBP dwelling VBG on IN the DT negative JJ all PDT the DT time NN you PRP 're VBP going VBG to TO wind VB up RP ignoring VBG or CC missing VBG the DT positives NNS . . neu_**
+
 As can be seen in this example, each token is followed by a POS, and at the end we have the sentiment analysis tag for this sentence "neu" (neutral) in this case.
 
 I set the max epochs to 20, and set an EarlyStopping callback which monitors the validation accuracy, which made the training process stop after 12 epochs with an accuracy of 67.83%. Following is the training plot:
