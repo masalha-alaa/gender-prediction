@@ -69,7 +69,7 @@ I set the max epochs to 20, and set an EarlyStopping callback which monitors the
 ![Training Plot](https://user-images.githubusercontent.com/78589884/144898622-75edfd1e-03fb-4070-9d38-73aaaf31afb1.png)
 
 ## Conclusion
-As can be seen from the results, the two methods are comparable but the RNN deep learning approach outperformed the regular ML approach just a litte bit (3%).
+As can be seen from the results, the two methods are comparable but the RNN deep learning approach outperformed the regular ML approach just a litte bit (2%).
 
 ## Deployment
 //Work in progress
