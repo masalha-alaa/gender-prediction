@@ -64,12 +64,12 @@ Turned into:
 
 As can be seen in this example, each token is followed by a POS, and at the end we have the sentiment analysis tag for this sentence "neu" (neutral) in this case.
 
-I set the max epochs to 20, and set an EarlyStopping callback which monitors the validation accuracy, which made the training process stop after 12 epochs with an accuracy of 67.83%. Following is the training plot:
+I set the max epochs to 20, and set an EarlyStopping callback which monitors the validation accuracy, which made the training process stop after 12 epochs with an accuracy of 68.02%. Following is the training plot:
 
-![Training Plot](https://user-images.githubusercontent.com/78589884/144708523-6938b1b3-c8c3-45ae-874c-7f985c1a0622.png)
+![Training Plot](https://user-images.githubusercontent.com/78589884/144898622-75edfd1e-03fb-4070-9d38-73aaaf31afb1.png)
 
 ## Conclusion
-As can be seen from the results, the two methods are comparable but the RNN deep learning approach outperformed the regular ML approach just a litte bit (2%).
+As can be seen from the results, the two methods are comparable but the RNN deep learning approach outperformed the regular ML approach just a litte bit (3%).
 
 ## Deployment
 //Work in progress
