@@ -9,7 +9,7 @@ Here I present a quick overview of the project. For a complete walkthrough, incl
 ## Dataset
 I used the [PSAW Python library](https://github.com/dmarx/psaw) to fetch data from reddit, and the [facebook-scraper library](https://github.com/kevinzg/facebook-scraper) to fetch data from Facebook. I ended up using the reddit data only, since the labeled FB data was very limited (since most users have their gender setting set to private).
 
-In some subreddits such as [r/AskMen](https://www.reddit.com/r/AskMen/), [r/AskWomen](https://www.reddit.com/r/AskWomen/), [r/relationship_advice](https://www.reddit.com/r/relationship_advice/), the authors provide a label called "flair", which contains their gender. Using the PSAW library I was able to fetch 164,855 posts and comments, ~70% of which are labeled as "female", and 30% are labeled as "male". The fetching script can be found under src/fetch_data_reddit.py.
+In some subreddits such as [r/AskMen](https://www.reddit.com/r/AskMen/), [r/AskWomen](https://www.reddit.com/r/AskWomen/), [r/relationship_advice](https://www.reddit.com/r/relationship_advice/), the authors provide a label called "flair", which contains their gender. Using the PSAW library I was able to fetch 164,855 posts and comments, ~70% of which are labeled as "female", and 30% are labeled as "male" (I cut off the female portion to have a balanced dataset of 50-50). The fetching script can be found under src/fetch_data_reddit.py.
 
 ## Preprocessing
 I performed the following preprocessing on the dataset before feeding it to the models:
