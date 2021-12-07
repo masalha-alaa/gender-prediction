@@ -34,7 +34,7 @@ In this approach, I built a dataframe with the following features:
 * Sentiment analysis (nltk function which scores each sample of being 'positive' / 'negative' / 'neutral'.
 * Custom words list: a list of custom words I thought would help the classifier (collected in various methods).
 
-Here the results among several classifiers that I tried, including an ensemble Voting model:
+Here are the results among several classifiers that I tried, including an ensemble Voting model:
 
 |Model                   |Accuracy   |MSE   |Tolerance with 95% Confidence Level|
 |------------------------|-----------|------|-----------------------------------|
