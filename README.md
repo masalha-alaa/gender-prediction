@@ -62,7 +62,7 @@ Turned into:
 
 **_if IN you PRP 're VBP dwelling VBG on IN the DT negative JJ all PDT the DT time NN you PRP 're VBP going VBG to TO wind VB up RP ignoring VBG or CC missing VBG the DT positives NNS . . neu_**
 
-As can be seen in this example, each token is followed by a POS, and at the end we have the sentiment analysis tag for this sentence "neu" (neutral) in this case.
+As can be seen in this example, each token is followed by a POS, and at the end we have the sentiment analysis tag for this sentence - "neu" (neutral) in this case.
 
 I set the max epochs to 20, and set an EarlyStopping callback which monitors the validation accuracy, which made the training process stop after 12 epochs with an accuracy of 68.02%. Following is the training plot:
 
