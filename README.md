@@ -74,5 +74,5 @@ As can be seen from the results, the two methods are comparable but the RNN deep
 <a name="deployment"/>
 
 ## Deployment
-I used Flask to deploy the project to Heroku<sup>*</sup>, and then wrote a simple HTML page to communicate with the model on the server and fetch the results using Ajax).
+I used Flask to deploy the project to Heroku, and then wrote a simple HTML page to communicate with the model on the server and fetch the results using Ajax).
 You can try the model by yourself [in this link](https://gender-prediction-website.herokuapp.com/) **(first request will take about a minute to wake up the server)**.
