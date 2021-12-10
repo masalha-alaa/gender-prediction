@@ -1,5 +1,6 @@
 # Gender Prediction
 
+https://user-images.githubusercontent.com/78589884/145580666-deb8b2e3-d803-4527-8fcd-fd80bd63fa06.mp4
 
 ## Introduction
 In this project I attempt to predict the gender (male / female) of English text authors. I built the dataset myself by using a third Python library to fetch public posts and comments from reddit. I tackled the problem with 2 different methods and compared the results. The first method is a regular Machine Learning approach using several classifiers and TfIdf values of certain features, and the second method is a deep learning approach using a bidirectional LSTM network. Additionally, I [deployed](#deployment) the final model to the web using Flask, so it can be accessed and tested online by everyone.
