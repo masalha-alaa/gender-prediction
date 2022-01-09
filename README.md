@@ -73,6 +73,7 @@ I set the max epochs to 20, and set an EarlyStopping callback which monitors the
 
 #### BERT
 Lastly, I tried a pretrained BERT<sub>BASE</sub> model (110M parameters) with the following hyper parameters:
+
 Number of layers (Transformer blocks): 4  
 Hidden size: 512  
 Number of self-attention heads: 8
