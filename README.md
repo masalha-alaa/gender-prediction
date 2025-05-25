@@ -5,7 +5,7 @@ https://user-images.githubusercontent.com/78589884/145580666-deb8b2e3-d803-4527-
 ## Introduction
 In this project I attempt to predict the gender (male / female) of English text authors. I built the dataset myself by using a third-party Python library to fetch public posts and comments from reddit. I tackled the problem with 3 different methods and compared the results. The first method is a regular Machine Learning approach using several classifiers and TfIdf values of certain features (mentioned down below). The second method is a deep learning approach using a bidirectional LSTM network. Last but not least is a BERT model form Hugging Face (HF) that I finetuned which achieved promising results. I [deployed](#deployment) the final model to the web using Flask, so it can be accessed and tested online by everyone.
 
-Here I present a quick overview of the project. For a complete walkthrough, including the code, please head over to the [src directory](https://github.com/masalha-alaa/gender-prediction/tree/master/src) for the regular ML approach, to my notebook [gender-recognition-keras.ipynb](https://github.com/masalha-alaa/gender-prediction/blob/master/gender_recognition_keras.ipynb) for the DL LSTM approach and to [gender_recognition_bert_pytorch.ipynb](https://nbviewer.org/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_with_sentiment_bert_pytorch.ipynb) for the BERT approach.
+Here I present a quick overview of the project. For a complete walkthrough, including the code, please head over to the [src directory](https://github.com/masalha-alaa/gender-prediction/tree/master/src) for the regular ML approach, to my notebook [gender-recognition-keras.ipynb](https://colab.research.google.com/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_keras.ipynb) for the DL LSTM approach and to [gender_recognition_bert_pytorch.ipynb](https://colab.research.google.com/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_with_sentiment_bert_pytorch.ipynb) for the BERT approach.
 
 ## Dataset
 I used the [PSAW Python library](https://github.com/dmarx/psaw) to fetch data from reddit, and the [facebook-scraper library](https://github.com/kevinzg/facebook-scraper) to fetch data from Facebook. I ended up using the reddit data only, since the labeled FB data was very limited (since most users have their gender setting set to private).
@@ -97,7 +97,7 @@ neu    positive    negative
 Next, the `ff_compound` layer is a layer which takes as input the output of the previous layer (128) + the CLS embeddings (BERT output) of size 768 (thus the input size is 768 + 128 = 896).
 And finally I added a linear layer which outputs 2 features (as the number of labels).
 
-**This model achieved the highest results with 76% accuracy.** The notebook can be found here: [gender_recognition_bert_pytorch.ipynb](https://nbviewer.org/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_bert_pytorch.ipynb). Following is the training progression:
+**This model achieved the highest results with 76% accuracy.** The notebook can be found here: [gender_recognition_bert_pytorch.ipynb](https://colab.research.google.com/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_bert_pytorch.ipynb). Following is the training progression:
 
 <img width="1247" alt="BERT Training Progression" src="https://user-images.githubusercontent.com/103353893/228188362-46a9a4b7-d4d4-4158-89e1-057340b98891.png">
 
