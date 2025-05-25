@@ -97,7 +97,7 @@ neu    positive    negative
 Next, the `ff_compound` layer is a layer which takes as input the output of the previous layer (128) + the CLS embeddings (BERT output) of size 768 (thus the input size is 768 + 128 = 896).
 And finally I added a linear layer which outputs 2 features (as the number of labels).
 
-**This model achieved the highest results with 76% accuracy.** The notebook can be found here: [gender_recognition_bert_pytorch.ipynb](https://github.com/masalha-alaa/gender-prediction/blob/master/gender_recognition_with_sentiment_bert_pytorch.ipynb). Following is the training progression:
+**This model achieved the highest results with 76% accuracy.** The notebook can be found here: [gender_recognition_bert_pytorch.ipynb](https://nbviewer.org/github/masalha-alaa/gender-prediction/blob/master/gender_recognition_bert_pytorch.ipynb). Following is the training progression:
 
 <img width="1247" alt="BERT Training Progression" src="https://user-images.githubusercontent.com/103353893/228188362-46a9a4b7-d4d4-4158-89e1-057340b98891.png">
 
